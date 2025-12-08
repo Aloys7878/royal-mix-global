@@ -8,3 +8,33 @@
     "plugins": []
   }
 }
+royal-mix-global/
+│
+├── apps/
+│   ├── mobile/            # Expo React Native
+│   ├── web/               # Next.js App
+│   ├── pi-miniapp/        # Pi Browser MiniApp
+│
+├── packages/
+│   ├── cloudinary-sdk/    # Shared upload SDK
+│   ├── api-client/        # AWS Gateway client
+│   ├── ui-kit/            # Shared UI components
+│
+├── services/
+│   ├── api-gateway/       # OpenAPI spec + routes
+│   ├── lambda/            # AWS Lambda functions
+│
+├── production/
+│   ├── deployment-plan.md
+│   ├── scaling-strategy.md
+│   ├── security-hardening.md
+│
+├── .github/
+│   ├── workflows/
+│       ├── mobile-ci.yml
+│       ├── web-ci.yml
+│       ├── lambda-ci.yml
+│
+├── README.md
+├── LICENSE
+└── turbo.json
