@@ -1,4 +1,4 @@
-# Royal Mix Global
+we# Royal Mix Global
 
 Royal Mix Global is a multi-ecosystem AI-powered platform built for:
 - Mobile (Expo React Native)
@@ -25,3 +25,39 @@ Royal Mix Global is a multi-ecosystem AI-powered platform built for:
 - Reusable components library
 
 ## Structure
+ROYAL-MIX-GLOBAL/
+│
+├── app/                    # Expo App source
+│   ├── components/
+│   ├── screens/
+│   ├── services/
+│   │    └── api/
+│   │         ├── cloudinary.ts
+│   │         ├── apiGateway.ts
+│   │         └── config.ts
+│   ├── hooks/
+│   ├── utils/
+│   ├── assets/
+│   └── App.tsx
+│
+├── cloud/
+│   ├── aws/
+│   │    ├── lambda/
+│   │    │    └── uploadHandler.js
+│   │    └── api-gateway.yaml
+│   └── cloudinary/
+│        └── preset-config.md
+│
+├── pi-browser/
+│    ├── miniapp-config.json
+│    └── index.html
+│
+├── docs/
+│    ├── architecture.md
+│    ├── api-endpoints.md
+│    ├── cloudinary-setup.md
+│    └── expo-setup.md
+│
+├── package.json
+├── README.md
+└── .gitignore
