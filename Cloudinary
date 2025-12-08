@@ -1,0 +1,22 @@
+import { Cloudinary } from "@cloudinary/url-gen";
+
+export const CLOUD_NAME = process.env.EXPO_PUBLIC_CLOUDINARY_NAME;
+export const UPLOAD_PRESET = "Royalmix-global";
+
+export async function uploadImage(fileUri: string) {
+  const data = new FormData();
+  data.append("file", {
+    uri: fileUri,
+    type: "image/jpeg",
+    name: "upload.jpg",
+  });
+  data.append("upload_preset", UPLOAD_PRESET);
+
+  const res = await fetch(`https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`, {
+    method: "POST",
+    body: data,
+  });
+
+  const json = await res.json();
+  return json.secure_url;
+}
