@@ -1,0 +1,26 @@
+---
+
+## 📡 Cloudinary Integration (Mobile App)
+File: `/app-mobile/cloudinary-upload.ts`
+
+```ts
+import { decode } from "base64-arraybuffer";
+
+export async function uploadToCloudinary(base64: string) {
+  const cloudName = "YOUR_CLOUD_NAME";
+  const preset = "Royalmix-global";
+
+  const data = new FormData();
+  data.append("file", `data:image/jpeg;base64,${base64}`);
+  data.append("upload_preset", preset);
+
+  const res = await fetch(
+    `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
+    {
+      method: "POST",
+      body: data,
+    }
+  );
+
+  return res.json();
+}
