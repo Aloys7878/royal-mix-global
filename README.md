@@ -1,2 +1,27 @@
-# ROYAL--MIX-GLOBAL-
-Royal Mix Global — Multi-ecosystem AI-powered platform for mobile, web, Pi Browser MiniApp, API Gateway, and global cloud services.  This repository contains the main architecture, Expo app source code, API integrations, Cloudinary upload service, deployments, and automation.
+# Royal Mix Global
+
+Royal Mix Global is a multi-ecosystem AI-powered platform built for:
+- Mobile (Expo React Native)
+- Web (React / Next.js)
+- Pi Browser (Mini App)
+- API Gateway (AWS/Lambda)
+- Cloud integrations (Cloudinary, S3, Firebase optional)
+- Secure global-scale digital services
+
+## Tech Stack
+- Expo React Native
+- TypeScript
+- Cloudinary Upload API
+- AWS API Gateway + Lambda
+- GitHub Actions (CI/CD)
+- Pi Browser MiniApp support
+- Global CDN optimization
+
+## Features
+- Secure media upload (Cloudinary)
+- User system foundation
+- AI assistant integration
+- Scalable app structure
+- Reusable components library
+
+## Structure
