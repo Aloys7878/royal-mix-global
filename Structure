@@ -1,0 +1,33 @@
+/api
+  /gateway
+    openapi.yaml
+  /lambda
+    index.ts
+
+/app-mobile
+  App.tsx
+  cloudinary-upload.ts
+  package.json
+
+/app-web
+  README.md
+
+/app-pi
+  manifest.json
+  index.html
+
+/infrastructure
+  cloudformation.yaml
+  api-gateway.json
+
+/libs
+  cloudinary.ts
+  api-client.ts
+
+/docs
+  architecture.md
+  roadmap.md
+  deployment.md
+
+/ci-cd
+  github-actions.yml
