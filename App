@@ -1,0 +1,24 @@
+const CLOUD_NAME = "YOUR_CLOUD_NAME";
+const UPLOAD_PRESET = "Royalmix-global";
+
+export async function uploadImage(imageUri: string) {
+  const data = new FormData();
+
+  data.append("file", {
+    uri: imageUri,
+    type: "image/jpeg",
+    name: "upload.jpg",
+  } as any);
+
+  data.append("upload_preset", UPLOAD_PRESET);
+
+  const res = await fetch(
+    `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/upload`,
+    {
+      method: "POST",
+      body: data,
+    }
+  );
+
+  return await res.json();
+}
