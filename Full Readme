@@ -1,0 +1,20 @@
+# Royal Mix Global
+
+Royal Mix Global is an AI-powered, multi-ecosystem platform built for:
+- Mobile (Expo React Native)
+- Web (Next.js)
+- Pi Browser Mini App
+- AWS API Gateway + Lambda
+- Cloudinary Global CDN
+- Modular Shared Libraries
+
+## 🌍 Mission
+Build the simplest, fastest, most efficient ecosystem that integrates every user and platform worldwide.
+
+## 🚀 Tech Stack
+- Expo React Native
+- Next.js
+- AWS Lambda + API Gateway
+- Cloudinary CDN
+- GitHub Actions CI/CD
+- TuroRepo Monorepo
