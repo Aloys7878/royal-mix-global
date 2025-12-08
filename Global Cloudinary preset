@@ -1,0 +1,10 @@
+# Royalmix-global Cloudinary preset – Production instructions
+
+1. Create preset name `Royalmix-global`.
+2. Mode: unsigned for public quick flows (preview), but **production** uploads MUST use signed workflow via Lambda signature endpoint.
+3. Allowed formats: png, jpg, jpeg, webp, avif
+4. Max file size: 10 MB
+5. Transformations: eager async thumbnails `w_600,h_600,c_fill,q_auto,f_auto`
+6. Enable `colors` and `phash` if you want auto tagging.
+7. Set `use_filename=true`, `unique_filename=true`, `overwrite=false`.
+8. Security: Deliver via HTTPS only. Do not enable URL override.
