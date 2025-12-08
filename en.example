@@ -1,0 +1,15 @@
+# .env.example - DO NOT COMMIT REAL SECRETS
+EXPO_PUBLIC_CLOUDINARY_NAME=royalmix-global
+CLOUDINARY_UPLOAD_PRESET=Royalmix-global
+
+# API (signature) endpoint for clients
+CLOUDINARY_SIGNATURE_URL=https://YOUR_API_GATEWAY_DOMAIN/prod/cloudinary/sign
+
+# Lambda / Backend env (set in AWS Lambda console)
+CLOUDINARY_API_KEY=REPLACE_IN_AWS_SECRETS
+CLOUDINARY_API_SECRET=REPLACE_IN_AWS_SECRETS
+CLOUDINARY_CLOUD_NAME=royalmix-global
+
+# Auth (example)
+JWT_ISSUER=https://auth.royalmix.global
+JWT_AUDIENCE=royalmix
