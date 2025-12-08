@@ -1,0 +1,13 @@
+# Security Policy
+
+## Reporting a Vulnerability
+Please email security@royalmixglobal.com (PGP key) or open a private GitHub Security Advisory.
+
+## Supported versions
+This repo follows semantic versioning. For critical issues contact us immediately.
+
+## Responsible disclosure
+We request 90 days to respond and remediate before public disclosure.
+
+## Secrets
+Do NOT commit secrets. Use GitHub Secrets / AWS Secrets Manager.
