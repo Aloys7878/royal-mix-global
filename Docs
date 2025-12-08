@@ -1,0 +1,7 @@
+# Architecture (summary)
+
+- Mobile (Expo) calls backend (API Gateway)
+- Critical uploads: client gets signature from /cloudinary/sign (Lambda) then uploads to Cloudinary
+- Auth: JWT via Clerk / Supabase (future)
+- Storage: Cloudinary for media, Supabase/Postgres for structured data
+- CI/CD: GitHub Actions build & deploy (mobile via EAS, web via Vercel)
