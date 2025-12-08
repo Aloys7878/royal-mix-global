@@ -1,0 +1,5 @@
+# Code owners
+# format: <path> @github-username-or-team
+/apps/mobile/ @Aloys7878
+/apps/web/ @Aloys7878
+/api/ @Aloys7878
