@@ -25,3 +25,18 @@ Royal Mix Global is a multi-ecosystem AI-powered platform built for:
 - Reusable components library
 
 ## Structure
+# Expo
+.expo/
+.expo-shared/
+
+# Environment Variables
+.env
+.env.local
+.env.production
+
+# Metro
+.metro-cache/
+
+# OS files
+.DS_Store
+Thumbs.db
