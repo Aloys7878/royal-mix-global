@@ -1,0 +1,4 @@
+pnpm install
+pnpm dev:mobile
+pnpm dev:web
+pnpm dev:api
