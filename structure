@@ -1,0 +1,25 @@
+royal-mix-global/
+│
+├── apps/
+│   ├── mobile/
+│   │   └── app/cloudinaryUpload.ts
+│   └── web/
+│       └── utils/cloudinaryUpload.ts
+│
+├── services/
+│   └── api/
+│       ├── lambda/handler.ts
+│       └── openapi.yaml
+│
+├── packages/
+│   └── ui/Button.tsx
+│
+├── Global Cloudinary preset/cloudinary.ts
+├── Full Readme/
+├── Structure/
+├── Root/
+├── .github/workflows/main.yml
+├── CODEOWNERS
+├── .gitignore
+├── README.md
+└── package.json
