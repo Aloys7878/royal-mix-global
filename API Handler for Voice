@@ -1,0 +1,12 @@
+import { RoyalVoiceGen } from "../../../ai/engine/voice";
+
+export const handler = async (event: any) => {
+  const { text } = JSON.parse(event.body);
+
+  const result = await RoyalVoiceGen(text);
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify(result)
+  };
+};
