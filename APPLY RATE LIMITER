@@ -1,0 +1,17 @@
+import { rateLimit } from "../middleware/rateLimit";
+
+export const handler = async (event: any) => {
+  const ip = event.requestContext.identity.sourceIp;
+
+  if (!rateLimit(ip)) {
+    return {
+      statusCode: 429,
+      body: JSON.stringify({ error: "Too many requests" })
+    };
+  }
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ message: "Allowed" })
+  };
+};
