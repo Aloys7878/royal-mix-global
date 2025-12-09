@@ -1,1 +1,24 @@
 Royal Mix Global is an AI-powered multi-ecosystem platform built with Expo React Native, AWS API Gateway, Cloudinary, and Pi Browser Mini-App support. It is designed for global scale, high stability, and flexible cloud integration.
+services/
+  auth/
+    handlers/
+      register.ts
+      login.ts
+      refreshSession.ts
+    utils/
+      jwt.ts
+      hash.ts
+      schema.ts
+    models/
+      User.ts
+    index.ts
+
+app/
+  context/
+    AuthContext.tsx
+  hooks/
+    useAuth.ts
+  screens/
+    LoginScreen.tsx
+    RegisterScreen.tsx
+    ProfileScreen.tsx
