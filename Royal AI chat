@@ -1,0 +1,8 @@
+/ai
+  /engine
+    inference.ts
+    chat.ts
+    media.ts
+  /routes
+    aiChatHandler.ts
+    aiImageHandler.ts
