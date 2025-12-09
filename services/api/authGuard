@@ -1,0 +1,15 @@
+import { authGuard } from "../middleware/authGuard";
+
+export const handler = async (event: any) => {
+  const user = authGuard(event);
+
+  if ("statusCode" in user) return user;
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({
+      message: "Secure route success",
+      user
+    })
+  };
+};
