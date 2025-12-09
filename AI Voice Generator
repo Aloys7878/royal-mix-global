@@ -1,0 +1,5 @@
+export const RoyalVoiceGen = async (text: string) => {
+  return {
+    audioUrl: `https://cdn.royalmixglobal.com/voice/${Date.now()}.mp3`
+  };
+};
