@@ -1,0 +1,16 @@
+import crypto from "crypto";
+
+const ALGO = "aes-256-cbc";
+const KEY = crypto.scryptSync(process.env.ENV_MASTER_KEY!, "salt", 32);
+const IV = Buffer.alloc(16, 0);
+
+export const encrypt = (text: string) => {
+  const cipher = crypto.createCipheriv(ALGO, KEY, IV);
+  return Buffer.concat([cipher.update(text, "utf8"), cipher.final()]).toString("hex");
+};
+
+export const decrypt = (encrypted: string) => {
+  const decipher = crypto.createDecipheriv(ALGO, KEY, IV);
+  return Buffer.concat([decipher.update(Buffer.from(encrypted, "hex")), decipher.final()]).toString();
+};
+
