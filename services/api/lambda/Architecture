@@ -1,0 +1,11 @@
+/services/auth
+   authHandler.ts
+   registerHandler.ts
+   loginHandler.ts
+   sessionHandler.ts
+   types.ts
+
+/db
+   prisma
+      schema.prisma
+      client.ts
