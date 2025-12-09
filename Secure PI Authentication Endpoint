@@ -1,0 +1,23 @@
+export const handler = async (event: any) => {
+  const body = JSON.parse(event.body);
+
+  const { user, credential } = body;
+
+  // Validate Pi signature (IMPORTANT)
+  const isValid = credential && credential.pi && credential.pi.uid;
+  if (!isValid) {
+    return {
+      statusCode: 403,
+      body: JSON.stringify({ error: "Invalid Pi authentication" })
+    };
+  }
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({
+      message: "Pi login success",
+      username: user.username,
+      uid: user.uid
+    })
+  };
+};
