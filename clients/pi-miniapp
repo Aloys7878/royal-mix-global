@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Royal Mix Global | Pi Mini App</title>
+    <script src="https://sdk.minepi.com/pi-sdk.js"></script>
+  </head>
+
+  <body>
+    <h1>Royal Mix Global - Pi Mini App</h1>
+
+    <button id="login">Login with Pi</button>
+
+    <script type="module">
+      Pi.init({ version: "2.0" });
+
+      document.getElementById("login").onclick = async () => {
+        const scopes = ["username", "payments", "wallet_address"];
+
+        try {
+          const auth = await Pi.authenticate(scopes, onIncomplete);
+          console.log("AUTH SUCCESS:", auth);
+
+          await fetch("https://api.royalmixglobal.com/pi/auth", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(auth)
+          });
+
+          alert("Welcome " + auth.user.username);
+        } catch (e) {
+          alert("Login failed");
+        }
+      };
+
+      function onIncomplete(payment) {
+        console.log("Incomplete payment:", payment);
+      }
+    </script>
+  </body>
+</html>
