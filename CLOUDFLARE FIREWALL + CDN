@@ -1,0 +1,20 @@
+{
+  "rules": [
+    {
+      "description": "Block XMLRPC",
+      "action": "block",
+      "expression": "(http.request.uri.path contains \"xmlrpc.php\")"
+    },
+    {
+      "description": "Block malicious bots",
+      "action": "block",
+      "expression": "(cf.client.bot) or (user_agent contains \"crawler\")"
+    },
+    {
+      "description": "Rate limit API",
+      "action": "challenge",
+      "expression": "(http.host contains \"api.royalmixglobal.com\" and http.request.uri.path contains \"/secure\")"
+    }
+  ]
+}
+
