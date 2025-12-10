@@ -8,3 +8,26 @@
     "plugins": []
   }
 }
+services/
+  auth/
+    handlers/
+      register.ts
+      login.ts
+      refreshSession.ts
+    utils/
+      jwt.ts
+      hash.ts
+      schema.ts
+    models/
+      User.ts
+    index.ts
+
+app/
+  context/
+    AuthContext.tsx
+  hooks/
+    useAuth.ts
+  screens/
+    LoginScreen.tsx
+    RegisterScreen.tsx
+    ProfileScreen.tsx
