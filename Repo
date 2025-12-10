@@ -1,0 +1,17 @@
+services/
+  ai/
+    handlers/
+      generateImage.ts
+      enhanceImage.ts
+      textToSpeech.ts
+      speechToText.ts
+      generateVideo.ts
+    utils/
+      aiClient.ts
+    index.ts
+
+app/
+  screens/
+    AIGeneratorScreen.tsx
+  hooks/
+    useAI.ts
