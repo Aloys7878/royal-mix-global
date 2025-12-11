@@ -1,0 +1,7 @@
+export const decodePiUser = (piUser: any) => {
+  return {
+    username: piUser?.username,
+    uid: piUser?.uid,
+    payments: piUser?.payment,
+  };
+};
