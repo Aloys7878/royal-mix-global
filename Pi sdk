@@ -1,0 +1,4 @@
+export const Pi = window.Pi;
+if (!Pi) {
+  console.warn("⚠️ Pi SDK not detected. Open the app inside Pi Browser.");
+}
