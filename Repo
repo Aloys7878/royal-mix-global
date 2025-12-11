@@ -15,3 +15,15 @@ app/
     AIGeneratorScreen.tsx
   hooks/
     useAI.ts
+pi/
+  manifest.json
+  pi-auth/
+    verifySignature.ts
+    decodeUser.ts
+  sdk/
+    pi-sdk.js
+app/
+  screens/
+    PiLoginScreen.tsx
+hooks/
+  usePiAuth.ts
