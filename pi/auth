@@ -1,0 +1,5 @@
+import crypto from "crypto";
+
+export function verifySignature(publicKey: string, data: string, signature: string) {
+  return crypto.verify("SHA256", Buffer.from(data), publicKey, Buffer.from(signature, "base64"));
+}
