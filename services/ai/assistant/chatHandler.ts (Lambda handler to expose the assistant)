@@ -1,0 +1,21 @@
+
+// services/ai/assistant/chatHandler.ts
+import { runPlanner } from "./plannerAgent";
+
+export const handler = async (event:any) => {
+  try {
+    const body = JSON.parse(event.body);
+    const userId = body.userId || "anonymous";
+    const message = body.message;
+
+    const result = await runPlanner(userId, message);
+
+    return {
+      statusCode: 200,
+      headers: { "Content-Type":"application/json", "Access-Control-Allow-Origin":"*" },
+      body: JSON.stringify({ ok:true, reply: result.answer, tools: result.toolOutputs })
+    };
+  } catch (err:any) {
+    return { statusCode: 500, body: JSON.stringify({ ok:false, error: err.message }) };
+  }
+};
