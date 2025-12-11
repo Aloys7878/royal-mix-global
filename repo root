@@ -1,0 +1,22 @@
+services/
+  ai/
+    assistant/
+      chatHandler.ts
+      plannerAgent.ts
+      toolRouter.ts
+      embeddings.ts
+      memory.ts
+      config.ts
+      types.ts
+apps/
+  mobile/
+    src/
+      hooks/
+        useRoyalAssistant.ts
+      screens/
+        AssistantScreen.tsx
+docs/
+  ai-assistant.md
+.github/workflows/
+  ai-ci.yml
+.env.example
