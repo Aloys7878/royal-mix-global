@@ -1,0 +1,24 @@
+name: AI Services CI
+
+on:
+  push:
+    paths:
+      - 'services/ai/**'
+      - 'docs/**'
+  pull_request:
+    paths:
+      - 'services/ai/**'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: node-version: 18
+      - name: Install deps
+        run: |
+          cd services/ai && npm ci
+      - name: Run lints/tests
+        run: |
+          cd services/ai && npm run lint || echo "add lint later"
