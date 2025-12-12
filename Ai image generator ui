@@ -1,0 +1,32 @@
+import { useState } from "react";
+import { View, Text, TextInput, Button, Image } from "react-native";
+
+export default function AiImage() {
+  const [prompt, setPrompt] = useState("");
+  const [img, setImg] = useState("");
+
+  const run = async () => {
+    const res = await fetch("https://royal-mix-global.vercel.app/api/ai/image", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ prompt }),
+    });
+    const data = await res.json();
+    setImg(data.url);
+  };
+
+  return (
+    <View style={{ padding: 20 }}>
+      <Text style={{ fontSize: 25 }}>AI Image</Text>
+      <TextInput
+        placeholder="Describe image..."
+        value={prompt}
+        onChangeText={setPrompt}
+        style={{ borderWidth: 1, marginVertical: 10, padding: 10 }}
+      />
+      <Button title="Generate Image" onPress={run} />
+
+      {img && <Image source={{ uri: img }} style={{ width: "100%", height: 300, marginTop: 20 }} />}
+    </View>
+  );
+}
