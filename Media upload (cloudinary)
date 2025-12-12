@@ -1,0 +1,26 @@
+import * as ImagePicker from "expo-image-picker";
+
+export default function Upload() {
+  const upload = async () => {
+    let img = await ImagePicker.launchImageLibraryAsync();
+
+    if (!img.canceled) {
+      const form = new FormData();
+      form.append("file", {
+        uri: img.assets[0].uri,
+        name: "photo.jpg",
+        type: "image/jpg",
+      });
+      form.append("upload_preset", "royalmix");
+
+      let res = await fetch(
+        "https://api.cloudinary.com/v1_1/YOUR_CLOUD_NAME/image/upload",
+        { method: "POST", body: form }
+      );
+
+      console.log(await res.json());
+    }
+  };
+
+  return <Button title="Upload media" onPress={upload} />;
+}
