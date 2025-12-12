@@ -1,0 +1,40 @@
+import { useState } from "react";
+import { View, Text, TextInput, Button } from "react-native";
+
+export default function AiText() {
+  const [input, setInput] = useState("");
+  const [result, setResult] = useState("");
+
+  const runAI = async () => {
+    const res = await fetch("https://royal-mix-global.vercel.app/api/ai/text", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ prompt: input }),
+    });
+
+    const data = await res.json();
+    setResult(data.output);
+  };
+
+  return (
+    <View style={{ padding: 20 }}>
+      <Text style={{ fontSize: 25 }}>AI Text Generator</Text>
+
+      <TextInput
+        placeholder="Write something..."
+        value={input}
+        onChangeText={setInput}
+        style={{
+          borderWidth: 1,
+          marginVertical: 10,
+          padding: 10,
+          borderRadius: 6,
+        }}
+      />
+
+      <Button title="Generate" onPress={runAI} />
+
+      <Text style={{ marginTop: 20 }}>{result}</Text>
+    </View>
+  );
+}
