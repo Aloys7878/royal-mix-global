@@ -1,0 +1,34 @@
+import { useState } from "react";
+import { View, Text, TextInput, Button } from "react-native";
+import { Audio } from "expo-av";
+
+export default function AiVoice() {
+  const [text, setText] = useState("");
+
+  const runVoice = async () => {
+    const res = await fetch("https://royal-mix-global.vercel.app/api/ai/voice", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text }),
+    });
+    const data = await res.json();
+
+    const { sound } = await Audio.Sound.createAsync({ uri: data.url });
+    sound.playAsync();
+  };
+
+  return (
+    <View style={{ padding: 20 }}>
+      <Text style={{ fontSize: 25 }}>AI Voice</Text>
+
+      <TextInput
+        placeholder="Enter text…"
+        value={text}
+        onChangeText={setText}
+        style={{ borderWidth: 1, padding: 10, marginVertical: 10 }}
+      />
+
+      <Button title="Generate Voice" onPress={runVoice} />
+    </View>
+  );
+}
