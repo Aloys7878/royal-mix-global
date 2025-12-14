@@ -1,0 +1,22 @@
+paths:
+  /ai/text:
+    post:
+      summary: Royal Mix Global AI Text Engine
+      operationId: aiText
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                prompt:
+                  type: string
+      responses:
+        "200":
+          description: AI text response
+      x-amazon-apigateway-integration:
+        uri:
+          Fn::Sub: arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${AiTextLambda.Arn}/invocations
+        httpMethod: POST
+        type: aws_proxy
