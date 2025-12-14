@@ -1,0 +1,5 @@
+import { request } from "./api";
+
+export async function login(userId: string) {
+  return request("/auth/login", { userId });
+}
