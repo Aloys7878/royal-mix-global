@@ -1,0 +1,21 @@
+import { View, Text } from "react-native";
+import { useEffect, useState } from "react";
+import { Runtime } from "../config/runtime";
+
+export default function TestnetStatus() {
+  const [status, setStatus] = useState("loading");
+
+  useEffect(() => {
+    fetch(`${Runtime.apiBaseUrl}/health`)
+      .then(res => res.json())
+      .then(() => setStatus("online"))
+      .catch(() => setStatus("offline"));
+  }, []);
+
+  return (
+    <View style={{ padding: 20 }}>
+      <Text>Royal Mix Global Testnet</Text>
+      <Text>Status: {status}</Text>
+    </View>
+  );
+}
