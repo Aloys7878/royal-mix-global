@@ -1,0 +1,7 @@
+paths:
+  /health:
+    get:
+      summary: Testnet health check
+      responses:
+        "200":
+          description: OK
