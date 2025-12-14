@@ -1,0 +1,22 @@
+# === GLOBAL ===
+APP_NAME=RoyalMixGlobal
+APP_ENV=development
+
+# === API ===
+API_BASE_URL=https://testnet.api.royalmixglobal.com
+
+# === AWS ===
+AWS_REGION=us-east-1
+
+# === AI ===
+OPENAI_API_KEY=replace_me
+OPENAI_MODEL=gpt-4o-mini
+
+# === PI NETWORK ===
+PI_APP_ID=replace_me
+PI_ENV=testnet
+
+# === CLOUDINARY ===
+CLOUDINARY_CLOUD_NAME=replace_me
+CLOUDINARY_API_KEY=replace_me
+CLOUDINARY_PRESET=royalmix-global
