@@ -1,0 +1,2 @@
+const result = await requestAiText("Hello Royal Mix Global");
+console.log(result.output);
