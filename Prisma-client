@@ -1,0 +1,75 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              String   @id @default(uuid())
+  piUID           String   @unique
+  role            Role
+  region          String
+  reputationScore Int      @default(0)
+  createdAt       DateTime @default(now())
+  projects        Project[] @relation("ProjectOwner")
+  contributions   Contribution[]
+}
+
+model Project {
+  id            String   @id @default(uuid())
+  title         String
+  description   String
+  category      String
+  region        String
+  ownerType     OwnerType
+  budget        Float
+  fundingStatus FundingStatus
+  progress      Int      @default(0)
+  media         Json?
+  aiInsights    Json?
+  ownerId       String
+  owner         User     @relation("ProjectOwner", fields: [ownerId], references: [id])
+  contributions Contribution[]
+  createdAt     DateTime @default(now())
+}
+
+model Contribution {
+  id        String   @id @default(uuid())
+  type      ContributionType
+  value     Float
+  userId    String
+  projectId String
+  user      User     @relation(fields: [userId], references: [id])
+  project   Project  @relation(fields: [projectId], references: [id])
+  createdAt DateTime @default(now())
+}
+
+enum Role {
+  citizen
+  gov_admin
+  ngo_admin
+  reviewer
+}
+
+enum OwnerType {
+  government
+  NGO
+  private
+  community
+}
+
+enum FundingStatus {
+  pending
+  active
+  completed
+}
+
+enum ContributionType {
+  money
+  work
+  content
+  data
+}
