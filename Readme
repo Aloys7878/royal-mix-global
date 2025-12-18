@@ -1,0 +1,19 @@
+royal-mix-global
+ ├── core/
+ │    └── trust-layer.md
+ │
+ ├── modules/
+ │    ├── government/
+ │    │     └── intelligence.md
+ │    │
+ │    ├── ngo/
+ │    │     └── transparency.md
+ │    │
+ │    ├── company/
+ │    │     └── market.md
+ │    │
+ │    └── citizens/
+ │          └── voice.md
+ │
+ └── README.md
+
