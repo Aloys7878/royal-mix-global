@@ -1,0 +1,23 @@
+/governance
+ ├── README.md
+ ├── roles-and-authority.md
+ ├── decision-flow.md
+ └── dispute-resolution.md
+
+/security
+ ├── README.md
+ ├── zero-trust-model.md
+ ├── data-protection.md
+ └── incident-response.md
+
+/ai-ethics
+ ├── README.md
+ ├── ai-usage-policy.md
+ ├── human-in-the-loop.md
+ └── bias-mitigation.md
+
+/trust
+ ├── README.md
+ ├── transparency-ledger.md
+ ├── audit-model.md
+ └── public-trust-score.md
