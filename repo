@@ -1,0 +1,29 @@
+/autonomy
+ ├── README.md
+ ├── autonomous-core.md
+ ├── decision-engine.md
+ ├── self-healing.md
+
+/evolution
+ ├── README.md
+ ├── feedback-loops.md
+ ├── feature-evolution.md
+ ├── market-adaptation.md
+
+/real-time-intelligence
+ ├── README.md
+ ├── human-needs-detection.md
+ ├── signal-sources.md
+ ├── priority-engine.md
+
+/auto-build
+ ├── README.md
+ ├── auto-feature-builder.md
+ ├── auto-deployment.md
+ └── rollback-system.md
+
+/empire
+ ├── README.md
+ ├── anti-collapse-design.md
+ ├── decentralization-map.md
+ └── 100-year-vision.md
