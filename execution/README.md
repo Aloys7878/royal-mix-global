@@ -1,8 +1,9 @@
 /royal-mix-global
  ├── execution/
- │    ├── step-7.md        ✅ (file ya mbere)
+ │    ├── step-7-overview.md
  │    ├── agent-network.md
- │    ├── incentive-engine.md
- │    ├── metrics.md
+ │    ├── incentive-revenue-engine.md
+ │    ├── growth-metrics.md
  │    ├── risk-protection.md
- │    └── README.md        ✅ (iza nyuma)
+ │
+ └── README.md
