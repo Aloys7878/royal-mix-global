@@ -30,3 +30,10 @@ Royal Mix Global is a multi-ecosystem AI-powered platform built for:
 - Reusable components library
 
 ## Structure
+## Ecosystem Modules
+
+- Royal Mix Choco (Intelligent Food System)
+- Agent & Shop Networks
+- Community TestNet
+- Data & Bonus Systems
+- Future Products (Drinks, Nutrition, Education)
