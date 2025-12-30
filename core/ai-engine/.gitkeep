@@ -1,0 +1,40 @@
+royal-mix-global/
+│
+├─ apps/
+│   ├─ web/                      # Pi Browser + Web UI
+│   ├─ admin/                    # Dashboards (Gov, Agents, Creators)
+│
+├─ core/
+│   ├─ ai-engine/                # Learning, prediction, automation
+│   ├─ discovery-engine/         # Search + feeds + trends
+│   ├─ recommendation/           # Personalized intelligence
+│
+├─ modules/
+│   ├─ pi-network/               # Pioneers, wallets, Web3 bridge
+│   ├─ media/                    # Video, shorts, live, captions
+│   ├─ virtual-world/            # Maps, hubs, meetings
+│   ├─ agents/                   # Registration, levels, commissions
+│   ├─ monetization/             # Ads, subs, payouts
+│   ├─ payments/                 # Banks, MTN, Airtel, MoMo, M-Pesa
+│   ├─ government/               # Public projects, trust dashboards
+│   ├─ crisis-response/          # Disaster & emergency systems
+│   ├─ employment/               # Jobs, gigs, matching
+│
+├─ data/
+│   ├─ schemas/                  # Users, media, projects
+│   ├─ indexes/                  # AI + search indexes
+│
+├─ infra/
+│   ├─ offline-sync/             # Offline → online
+│   ├─ low-bandwidth/            # Compression, caching
+│   ├─ security/                 # Roles, encryption, logs
+│
+├─ api/
+│   ├─ public/                   # Pi AI App Studio entry point
+│   ├─ internal/                 # AI + automation
+│
+├─ visuals/
+│   ├─ hero/                     # Cinematic empire visuals
+│   ├─ modules/                  # System diagrams & infographics
+│
+└─ README.md
