@@ -1,0 +1,18 @@
+[
+  {
+    "id": "vid001",
+    "title": "Royal Mix Global – Welcome",
+    "type": "short",
+    "views": 12000,
+    "creator": "Royal Mix",
+    "category": "intro"
+  },
+  {
+    "id": "vid002",
+    "title": "Royal Mix Choco Production",
+    "type": "education",
+    "views": 5400,
+    "creator": "Choco Team",
+    "category": "business"
+  }
+]
