@@ -1,0 +1,52 @@
+royal-mix-global/
+├── README.md
+├── core/
+│   ├── ai-engine/
+│   │   └── .gitkeep
+│   ├── discovery-engine/
+│   │   ├── .gitkeep
+│   │   ├── indexer.ts
+│   │   ├── ranker.ts
+│   │   └── recommender.ts
+│   └── recommendation/
+│       └── .gitkeep
+│
+├── modules/
+│   ├── agents/
+│   │   └── .gitkeep
+│   ├── media/
+│   │   └── .gitkeep
+│   ├── monetization/
+│   │   └── engine.ts
+│   ├── government/
+│   │   └── .gitkeep
+│   ├── pi-network/
+│   │   └── .gitkeep
+│   ├── crisis-response/
+│   │   └── .gitkeep
+│   └── employment/
+│       └── .gitkeep
+│
+├── api/
+│   ├── public/
+│   │   ├── upload/
+│   │   │   └── video.ts
+│   │   ├── feed/
+│   │   │   └── videos.ts
+│   │   ├── stream/
+│   │   │   └── video.ts
+│   │   ├── search.ts
+│   │   └── sync/
+│   │       └── offline.ts
+│   │
+│   └── internal/
+│       ├── ai-indexer.ts
+│       ├── transcoder.ts
+│       ├── recommendation.ts
+│       └── analytics.ts
+│
+└── visuals/
+    ├── homepage/
+    │   └── .gitkeep
+    └── pitch/
+        └── .gitkeep
