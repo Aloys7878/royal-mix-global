@@ -1,0 +1,10 @@
+[
+  {
+    "id": "agent001",
+    "name": "John Zambia",
+    "level": "road",
+    "zone": "Lusaka",
+    "salesToday": 45,
+    "trustScore": 92
+  }
+]
